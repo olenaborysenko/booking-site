@@ -109,3 +109,31 @@
 	}
 
 }
+
+
+// SIDE NAVIGATION
+.side-nav {
+	list-style: none;
+
+	&__item {
+
+	}
+
+	&__link {
+		text-decoration: none;
+	}
+
+	&__icon {
+		width: 1.75rem;
+		height: 1.75rem;
+	}
+}
+
+
+// LEGAL TEXT
+.legal {
+	font-size: 1.2rem;
+	color: var(--color-grey-light-4);
+	text-align: center;
+	padding: 2.5rem;
+}
