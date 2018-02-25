@@ -12,6 +12,13 @@
 	justify-content: center;
 	align-items: center;
 
+	@media only screen and (max-width: $bp-smallest) {
+		order: 1;
+		flex: 0 0 100%;
+		overflow: hidden;
+		background-color: var(--color-grey-light-2);
+	}
+
 	&__input {
 		font-family: inherit;
 		font-size: inherit;
@@ -157,8 +164,8 @@
 			width: 100%;
 			transform: scaleX(0);
 			transition: transform .2s,
-						height 0.4s cubic-bezier(1,0,0,1) 0.2s,
-						background-color 0.1s;
+						height .4s cubic-bezier(1,0,0,1) .2s,
+						background-color .1s;
 		}
 	}
 
@@ -194,6 +201,11 @@
 			justify-content: center;
 			padding: 2rem;
 		}
+
+		@media only screen and (max-width: $bp-small) {
+			flex-direction: column;
+			padding: 1.5rem .5rem;
+		}
 	}
 
 	&__icon {
@@ -201,6 +213,13 @@
 		height: 1.75rem;
 		margin-right: 2rem;
 		fill: currentColor;
+
+		@media only screen and (max-width: $bp-small) {
+			width: 2.25rem;
+			height: 2.25rem;
+			margin-right: 0;
+			margin-bottom: .5rem;
+		}
 	}
 }
 
@@ -241,11 +260,25 @@
 		font-weight: 300;
 		letter-spacing: 1px;
 		padding: 1.5rem 3rem;
+
+		@media only screen and (max-width: $bp-small) {
+			font-size: 1.8rem;
+			padding: 1.25rem 2rem;
+		}
+
+		@media only screen and (max-width: $bp-smallest) {
+			font-size: 1.8rem;
+			padding: 1.25rem 1rem 1.25rem 2rem;
+		}
 	}
 
 	&__stars {
 		margin-right: auto;
 		display: flex;
+
+		@media only screen and (max-width: $bp-smallest) {
+			margin-right: 1rem;
+		}
 	}
 
 	&__icon-star,
@@ -259,10 +292,21 @@
 		font-size: 1.2rem;
 		display: flex;
 		vertical-align: center;
+
+		@media only screen and (max-width: $bp-smallest) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 
 	&__icon-location {
 		margin-right: .5rem;
+
+		@media only screen and (max-width: $bp-smallest) {
+			margin-right: 0;
+			margin-bottom: .5rem;
+		}
 	}
 
 	&__rating {
@@ -275,17 +319,26 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+
+		@media only screen and (max-width: $bp-small) {
+			padding: 0 1.5rem;
+		}
 	}
 
 	&__rating-avg {
 		font-size: 2.25rem;
 		font-weight: 300;
 		margin-bottom: -3px;
+
+		@media only screen and (max-width: $bp-small) {
+			font-size: 1.8rem;
+		}
 	}
 
 	&__rating-count {
 		font-size: .8rem;
 		text-transform: uppercase;
+		text-align: center;
 	}
 }
 
